@@ -98,7 +98,6 @@ JSFLAGS += -s ASYNCIFY_STACK_SIZE=81920
 JSFLAGS += -s 'ASYNCIFY_IMPORTS=["mp_js_sleep_with_intr"]' -s WASM=1 -s USE_SDL=2 -s ALLOW_MEMORY_GROWTH=1
 JSFLAGS += -s EXPORTED_FUNCTIONS="['_mp_js_init', '_mp_js_init_repl', '_mp_js_do_str', '_mp_js_process_char', '_mp_hal_get_interrupt_char', '_mp_sched_keyboard_interrupt', '_mp_handle_pending']"
 JSFLAGS += -s EXPORTED_RUNTIME_METHODS="['ccall', 'cwrap']"
-JSFLAGS += -s --memory-init-file 0
 JSFLAGS += --js-library library.js
 
 all: $(BUILD)/micropython.js
